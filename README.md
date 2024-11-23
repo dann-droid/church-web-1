@@ -1,37 +1,62 @@
-# Instructions
+Believers Dominion Conference 2025 - Event Registration Web App
+This repository contains the code for an event registration web application/API for Believers Dominion Conference 2025. 
+The app enables participants to register for the annual church conference and generate a downloadable ticket.
 
-1. Fork the whole Repository
-2. Clone to your local Machine
-3. In the base folder run ```npm install```
+Features
 
-        NB: Hiyo package.json unaona hapa kwa Base folder ni ya backend. Nimetumia hiyo structure sababu ikifika time ya kuhost itakuwa easier that way. From personal experience though. But I think ni approach poa sababu pia nimeona other Devs wakifanya hivyo
+•	User-friendly Design: Simple, clean interface tailored for non-tech-savvy users.
 
-4. Start the server by typing: ```npm run dev```
+•	Event Details: View event information and registration requirements.
 
-        NB: Hii itarun the Server by navigating to the backend folder and running nodemon app.js. 
-    
-        Kwa package.json ndio nimeset hivyo if you want to check out
+•	Registration System:
+o	Collects participant details: Name, Email, Church Name, Phone Number, and Boarding Status.
 
-5. Open ```index.js``` in the browser and navigate to the form to try it out.
+o	Generates a unique identification number for each participant.
 
-Setting za database sijachange kitu so you'll use the same things you had
+•	PDF Ticket Generation:
+o	Includes participant details for easy verification.
 
-And then utanotice kuna ```.gitignore``` file tena. Hii ni ya kuspecify vitu hutaki kutrack na Git which should always include:
+•	Responsive Design: Accessible on all devices (mobile, tablet, desktop).
 
-    1. node_modules //Project dependencies
-    2. .env //Environment variables
+Technologies Used
+•	Frontend: HTML/CSS/JavaScript
+•	Backend: Node.js/Express
+•	Database: MySQL
+•	PDF Generation: pdfkit by node.js
 
+Installation
+To run the project locally, follow these steps:
+1.	Clone the repository:
+git clone https://github.com/yourusername/believers-conference-registration.git
+cd believers-conference-registration
+2.	Install dependencies:
+npm install
+3.	Set up environment variables:
+ Create a .env file and add the following:
+makefile
+DATABASE_URL=your_database_url
+4.	Start the server:
+npm start
+5.	Access the web app: Open your browser and navigate to http://localhost:3000 
+Usage
+1.	Navigate to the registration page.
+2.	Fill in the required details (Name, Email, Phone Number, Boarding Status, Your role/postion etc.)
+3.	Submit the form to register for the event.
+4.	Download the generated PDF ticket.
 
+Contributing
+Contributions are welcome! Please follow these steps to contribute:
+1.	Fork this repository.
+2.	Create a new branch (git checkout -b feature-name).
+3.	Make your changes and commit (git commit -m "Your description of changes").
+4.	Push to the branch (git push origin feature-name).
+5.	Submit a pull request.
 
-And then hiyo ```.env``` file unaona hapo ni ya credentials zako za database pamoja na the port ya server. 
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-So any other time ukona credential za kutumika anywhere zieke kwa ```.env```
+Contact
+For inquiries or support, please contact:
+•	Email: dansonkinyanjui10@gmail.com
+•	GitHub: https://www.github.com/dann-droid
 
-For Security purposes hivyo ndio unafaa kufanya alafu sasa unaignore kwa ```.gitignore``` ndio usiziweke GitHub
-
-Nimeeka hapo for now sababu ya wewe kuclone but after umeclone uncomment hiyo comment ya ```.env```
-
-
-Nimeignore ```database.sql``` file yako but utacopy tu yenye ulikuwa nayo sababu sijachange anything
-
-And then pia kuwa unasave ```nodemon``` na ```cors``` as Development dependencies by running the command ```npm install --save-dev <package>``` ama pia ```npm install -D <package>```
